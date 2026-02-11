@@ -1,0 +1,50 @@
+/** This rule should be at the top of the stylesheet so that it gets loaded in first and then can be used later on in the cascade. Remember that @font-face is defining a font, so we can give whatever value we want to use to font-family **/
+
+/**Lastly, make sure to put the WOFF and WOFF2 files in the css/ directory, as they are part of the presentation layer (and makes pathing to them easier). **/
+
+@font-face {
+    font-family: 'retro_signatureregular';
+    src: url('retrosignature-webfont.woff2') format('woff2'),
+         url('retrosignature-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/**font-family: "Special Elite", system-ui;**/
+
+body {
+    background-color: #f5f5f4;
+    color: #292524;
+    font-family: "Special Elite", system-ui;
+    font-size: 125%; /**1.25rem or 20px**/
+}
+
+/** There should always be a default or fallback font, just in case something goes awry**/
+
+h1 {
+    font-family: 'retro_signatureregular', cursive;
+    font-weight: normal;
+    font-size: 7rem;
+    line-height: 0.5;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+p {
+    margin-bottom: 1rem;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column nowrap;
+    max-width: 65ch;
+    padding: 1rem;
+}
